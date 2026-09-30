@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pika — Overseas Choice. Local Certainty.</title>
+<meta name="description" content="Pika Verified — discover verified overseas products with clear pricing, COD and local pickup, demo and return support.">
+<style>
+:root{
+  --navy:#10143d; --purple:#5b4bd8; --violet:#7868e6; --pink:#ff6f91;
+  --cream:#fffaf5; --ink:#17172b; --muted:#77758a; --line:#eceaf3;
+  --green:#22a06b; --orange:#ff9d42; --white:#fff;
+  --shadow:0 18px 50px rgba(31,27,74,.10);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--ink);background:#fff}
+button,input,select{font:inherit}.container{max-width:1180px;margin:auto;padding:0 22px}
+.topbar{background:var(--navy);color:#fff;text-align:center;font-size:13px;padding:9px}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;gap:30px}
+.logo{font-size:30px;font-weight:900;letter-spacing:-1.5px;color:var(--purple);text-decoration:none}
+.logo span{color:var(--pink)}
+.links{display:flex;gap:22px;flex:1}.links a{color:#444;text-decoration:none;font-weight:650;font-size:14px}
+.nav-actions{display:flex;gap:9px;align-items:center}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:12px;width:42px;height:42px;cursor:pointer}
+.cartbtn{position:relative}.badge{position:absolute;right:-4px;top:-5px;background:var(--pink);color:#fff;border-radius:20px;font-size:10px;padding:3px 6px;font-weight:800}
+.hero{background:linear-gradient(135deg,#f4f1ff 0%,#fff5f1 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;min-height:610px;align-items:center;gap:20px}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e8e2ff;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;color:var(--purple)}
+h1{font-size:64px;line-height:.98;letter-spacing:-4px;margin:18px 0}.gradient{background:linear-gradient(90deg,var(--purple),#d33b76);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:#67657a;line-height:1.65;max-width:590px}
+.btn{border:0;border-radius:13px;padding:13px 18px;font-weight:800;cursor:pointer}.primary{background:var(--purple);color:#fff}.dark{background:var(--navy);color:#fff}.ghost{background:#fff;border:1px solid var(--line)}
+.hero-btns{display:flex;gap:10px;margin:26px 0}.trustline{display:flex;gap:20px;flex-wrap:wrap;color:#555;font-size:13px;font-weight:700}.trustline span::before{content:"✓";color:var(--green);margin-right:6px}
+.hero-art{position:relative;height:510px}.orb{position:absolute;width:430px;height:430px;border-radius:50%;background:linear-gradient(135deg,#cfc8ff,#ffd9e3);right:25px;top:50px}
+.box{position:absolute;background:#c99c70;border-radius:16px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;letter-spacing:1px}
+.box:after{content:"PIKA";border:2px solid rgba(255,255,255,.7);padding:5px 10px}
+.b1{width:230px;height:180px;right:45px;top:105px;transform:rotate(8deg)}.b2{width:200px;height:160px;right:230px;top:265px;transform:rotate(-7deg)}.phone{position:absolute;left:45px;top:85px;width:180px;height:330px;background:#17172b;border:8px solid #fff;border-radius:28px;box-shadow:var(--shadow);transform:rotate(-9deg);padding:25px 13px}
+.screen{background:#f7f4ff;border-radius:18px;height:100%;padding:14px}.mini-logo{font-weight:900;color:var(--purple);font-size:19px}.mini-card{background:#fff;border-radius:12px;padding:12px;margin-top:12px;box-shadow:0 4px 14px #ddd}.mini-product{height:85px;border-radius:10px;background:linear-gradient(135deg,#ded7ff,#fff);margin-bottom:8px}
+section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.eyebrow{font-size:12px;color:var(--purple);font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.section-head h2{font-size:38px;letter-spacing:-1.8px;margin:7px 0}.section-head p{color:var(--muted);max-width:520px;line-height:1.6}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}.feature .emoji{font-size:25px}.feature h3{font-size:16px;margin:12px 0 7px}.feature p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:22px}.search{flex:1;position:relative}.search input{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:13px;outline:none}.filter{padding:13px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.product{border:1px solid var(--line);border-radius:19px;overflow:hidden;background:#fff;transition:.2s;position:relative}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pimg{height:205px;background:#f5f3ff;display:flex;align-items:center;justify-content:center;position:relative}.pimg .tag{position:absolute;left:11px;top:11px;background:#fff;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:900;color:var(--purple)}
+.prod-art{width:145px;height:125px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:54px;background:linear-gradient(135deg,#ddd7ff,#fff)}
+.pbody{padding:15px}.cat{font-size:11px;color:#8b899a}.pname{font-weight:800;margin:5px 0 8px;min-height:40px}.price{font-size:19px;font-weight:900}.old{color:#999;text-decoration:line-through;font-size:12px;margin-left:5px}.lane{font-size:10px;font-weight:800;color:var(--green);margin-top:7px}.pactions{display:flex;gap:8px;margin-top:13px}.pactions button{flex:1;padding:10px;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:800;cursor:pointer}.pactions .add{background:var(--purple);color:#fff;border-color:var(--purple)}
+.banner{background:var(--navy);color:#fff;border-radius:28px;padding:45px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.banner h2{font-size:40px;letter-spacing:-1.8px;margin:0 0 12px}.banner p{color:#d9d8ea;line-height:1.6}.scan{background:#fff;color:var(--ink);border-radius:20px;padding:24px}.qr{width:130px;height:130px;background:repeating-linear-gradient(45deg,#111 0 4px,#fff 4px 8px);margin:auto;border:9px solid #fff;outline:1px solid #ddd}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0}.step{padding:20px;border-top:2px solid #ddd;position:relative}.step:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--purple)}.step strong{display:block;margin:12px 0 6px}.step p{font-size:13px;color:var(--muted);line-height:1.5}
+.footer{background:#0d1032;color:#fff;padding:55px 0 25px}.footgrid{display:grid;grid-template-columns:1.3fr .8fr .8fr .8fr;gap:30px}.footer h3{font-size:14px}.footer a,.footer p{color:#bfc0d3;font-size:13px;text-decoration:none;line-height:2}.copyright{border-top:1px solid #292d51;margin-top:40px;padding-top:18px;color:#8f91aa;font-size:12px}
+.modal{position:fixed;inset:0;background:rgba(8,9,30,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}.modal.open{display:flex}.modalbox{background:#fff;width:min(560px,100%);border-radius:22px;padding:28px;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:18px;top:15px;border:0;background:#f5f4f9;width:35px;height:35px;border-radius:50%;cursor:pointer}.cartrow{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);gap:15px}.empty{padding:35px;text-align:center;color:var(--muted)}
+@media(max-width:900px){.links{display:none}.hero-grid{grid-template-columns:1fr}.hero-art{height:420px}.features,.grid{grid-template-columns:repeat(2,1fr)}.banner{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){h1{font-size:45px}.hero-art{transform:scale(.8);transform-origin:top center}.features,.grid,.footgrid{grid-template-columns:1fr}.toolbar{flex-wrap:wrap}.search{min-width:100%}.section-head{display:block}.banner{padding:28px}.banner h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="topbar">PIKA VERIFIED • Overseas choice, local certainty • COD + local pickup, demo & returns</div>
+<nav><div class="container navin">
+<a class="logo" href="#">PIKA<span>.</span></a>
+<div class="links"><a href="#shop">Shop</a><a href="#how">How Pika Works</a><a href="#trust">Why Verified</a><a href="#support">Support</a></div>
+<div class="nav-actions"><button class="iconbtn" onclick="openModal('searchModal')">⌕</button><button class="iconbtn cartbtn" onclick="openModal('cartModal')">🛒<span class="badge" id="count">0</span></button></div>
+</div></nav>
+
+<header class="hero"><div class="container hero-grid">
+<div>
+<span class="kicker">✓ PIKA VERIFIED</span>
+<h1>More choice.<br><span class="gradient">Less uncertainty.</span></h1>
+<p>Discover hard-to-find overseas products with verified authenticity, clear final pricing, Cash on Delivery and local Pika Points for pickup, demo and returns.</p>
+<div class="hero-btns"><a class="btn primary" href="#shop">Explore Products</a><a class="btn ghost" href="#trust">Why Pika?</a></div>
+<div class="trustline"><span>QR verified</span><span>COD + bKash/Nagad</span><span>Local returns</span></div>
+</div>
+<div class="hero-art"><div class="orb"></div><div class="box b1"></div><div class="box b2"></div><div class="phone"><div class="screen"><div class="mini-logo">PIKA.</div><div class="mini-card"><div class="mini-product"></div><b>Smart Home Picks</b><br><small>Verified • COD</small></div><div class="mini-card"><b>Final price</b><br>৳ 2,490</div></div></div></div>
+</div></header>
+
+<section id="trust"><div class="container">
+<div class="section-head"><div><div class="eyebrow">The Pika promise</div><h2>Built around certainty.</h2></div><p>Every part of the journey is designed around the customer pain points in the case: authenticity, delivery, payment, returns and price clarity.</p></div>
+<div class="features">
+<div class="feature"><div class="emoji">🔎</div><h3>Verified Products</h3><p>QR-based authenticity check and product-level verification before you buy.</p></div>
+<div class="feature"><div class="emoji">💳</div><h3>Pay Your Way</h3><p>Cash on Delivery plus bKash/Nagad for a familiar checkout experience.</p></div>
+<div class="feature"><div class="emoji">📍</div><h3>Pika Points</h3><p>Selected local retailers support pickup, product demo and return assistance.</p></div>
+<div class="feature"><div class="emoji">🧾</div><h3>Trust Receipt</h3><p>Keep warranty status, return deadline and support information in one place.</p></div>
+</div>
+</div></section>
+
+<section id="shop" style="background:#fbfaff"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Shop Pika</div><h2>Verified picks for everyday life.</h2></div><p>Start with practical, high-demand categories: kitchen, home utility and gadgets.</p></div>
+<div class="toolbar"><div class="search"><input id="search" placeholder="Search products..." oninput="renderProducts()"></div><select class="filter" id="category" onchange="renderProducts()"><option value="All">All categories</option><option>Gadgets</option><option>Kitchen</option><option>Home Utility</option></select></div>
+<div class="grid" id="products"></div>
+</div></section>
+
+<section id="how"><div class="container">
+<div class="section-head"><div><div class="eyebrow">How it works</div><h2>See it. Verify it. Get it.</h2></div></div>
+<div class="steps">
+<div class="step"><strong>01 · Discover</strong><p>Find products that are difficult to source locally.</p></div>
+<div class="step"><strong>02 · Trust</strong><p>Check the Pika Verified badge and QR information.</p></div>
+<div class="step"><strong>03 · Buy</strong><p>See the final price before checkout and choose COD or wallet.</p></div>
+<div class="step"><strong>04 · Receive</strong><p>Home delivery or pickup from a selected Pika Point.</p></div>
+<div class="step"><strong>05 · Return</strong><p>Use local support and the clear return process when needed.</p></div>
+</div>
+</div></section>
+
+<section><div class="container"><div class="banner">
+<div><div class="eyebrow" style="color:#bcb4ff">Pika Trust Layer</div><h2>Proof before pay.</h2><p>Scan → Verify → Pay → Collect. The Pika experience connects overseas variety with local certainty.</p><button class="btn primary" onclick="openModal('verifyModal')">Try QR Verification</button></div>
+<div class="scan"><div class="qr"></div><p style="text-align:center;font-weight:800;margin:15px 0 5px">Pika Verified Demo</p><p style="text-align:center;font-size:12px;color:#777;margin:0">Product authenticity • Warranty • Return deadline</p></div>
+</div></div></section>
+
+<section id="support" style="background:#fffaf5"><div class="container"><div class="section-head"><div><div class="eyebrow">Need help?</div><h2>Local support, not just a checkout page.</h2></div><p>Have a question about delivery, a return, or a product? Pika Points and customer support are part of the model—not an afterthought.</p></div>
+<div class="features"><div class="feature"><div class="emoji">🚚</div><h3>Fast Lane</h3><p>Pre-stocked hero SKUs with faster fulfilment where available.</p></div><div class="feature"><div class="emoji">🗓️</div><h3>Discovery Lane</h3><p>Controlled pre-orders with a clear ETA before checkout.</p></div><div class="feature"><div class="emoji">↩️</div><h3>Returns</h3><p>Local retailer-assisted return support for eligible products.</p></div><div class="feature"><div class="emoji">💬</div><h3>Customer Support</h3><p>Get help with delivery, warranty, returns and product questions.</p></div></div></div></section>
+
+<footer class="footer"><div class="container"><div class="footgrid"><div><div class="logo" style="color:#fff">PIKA<span>.</span></div><p>Overseas choice. Local certainty.</p><p>Verified products • COD • Local support</p></div><div><h3>Shop</h3><a href="#shop">Gadgets</a><br><a href="#shop">Kitchen</a><br><a href="#shop">Home Utility</a></div><div><h3>Trust</h3><a href="#trust">Pika Verified</a><br><a href="#how">How it works</a><br><a href="#" onclick="openModal('verifyModal');return false">Verify a product</a></div><div><h3>Support</h3><a href="#support">Delivery</a><br><a href="#support">Returns</a><br><a href="#support">Warranty</a></div></div><div class="copyright">© 2026 Pika Verified • Demo website for Project Pika case presentation</div></div></footer>
+
+<div class="modal" id="cartModal"><div class="modalbox"><button class="close" onclick="closeModal('cartModal')">×</button><h2>Your cart</h2><div id="cart"></div></div></div>
+<div class="modal" id="verifyModal"><div class="modalbox"><button class="close" onclick="closeModal('verifyModal')">×</button><div class="eyebrow">PIKA VERIFIED</div><h2>Scan → Verify → Pay → Collect</h2><p style="color:#777;line-height:1.6">In the live Pika model, each dispatched unit can carry a QR-based traceability check showing authenticity, warranty status and return deadline.</p><div style="background:#f6f4ff;border-radius:15px;padding:18px"><b>✓ Authenticity check</b><br><span style="color:#777;font-size:13px">Demo verification passed</span><br><br><b>✓ Warranty registration</b><br><span style="color:#777;font-size:13px">Available for eligible products</span><br><br><b>✓ Return deadline</b><br><span style="color:#777;font-size:13px">Shown on your Pika Trust Receipt</span></div></div></div>
+<div class="modal" id="searchModal"><div class="modalbox"><button class="close" onclick="closeModal('searchModal')">×</button><h2>Search Pika</h2><input id="modalSearch" style="width:100%;padding:14px;border:1px solid #ddd;border-radius:12px" placeholder="Try “earbuds” or “kitchen”" oninput="document.getElementById('search').value=this.value;renderProducts()"><p style="color:#777;font-size:13px">Results will appear in the Shop section.</p><button class="btn primary" onclick="closeModal('searchModal');document.getElementById('shop').scrollIntoView()">View products</button></div></div>
+
+<script>
+const products=[
+{id:1,name:"Wireless ANC Earbuds",cat:"Gadgets",price:2490,old:2990,icon:"🎧",lane:"FAST LANE"},
+{id:2,name:"Mini Portable Blender",cat:"Kitchen",price:2190,old:2590,icon:"🥤",lane:"FAST LANE"},
+{id:3,name:"Smart RGB Desk Lamp",cat:"Home Utility",price:1890,old:2190,icon:"💡",lane:"FAST LANE"},
+{id:4,name:"3-in-1 Charging Hub",cat:"Gadgets",price:1490,old:1790,icon:"🔌",lane:"FAST LANE"},
+{id:5,name:"Digital Kitchen Scale",cat:"Kitchen",price:1290,old:1490,icon:"⚖️",lane:"DISCOVERY LANE"},
+{id:6,name:"Foldable Storage Box",cat:"Home Utility",price:990,old:1190,icon:"📦",lane:"FAST LANE"},
+{id:7,name:"Magnetic Phone Stand",cat:"Gadgets",price:790,old:990,icon:"📱",lane:"FAST LANE"},
+{id:8,name:"USB Milk Frother",cat:"Kitchen",price:690,old:850,icon:"☕",lane:"DISCOVERY LANE"}
+];
+let cart=[];
+function renderProducts(){
+ const q=document.getElementById('search').value.toLowerCase(), c=document.getElementById('category').value;
+ const list=products.filter(p=>(c==='All'||p.cat===c)&&(!q||p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));
+ document.getElementById('products').innerHTML=list.length?list.map(p=>`<article class="product"><div class="pimg"><span class="tag">✓ VERIFIED</span><div class="prod-art">${p.icon}</div></div><div class="pbody"><div class="cat">${p.cat}</div><div class="pname">${p.name}</div><div class="price">৳ ${p.price.toLocaleString()} <span class="old">৳ ${p.old.toLocaleString()}</span></div><div class="lane">● ${p.lane} · Clear ETA</div><div class="pactions"><button onclick="buy(${p.id})">View</button><button class="add" onclick="add(${p.id})">Add to cart</button></div></div></article>`).join(''):'<div class="empty" style="grid-column:1/-1">No products found. Try another search.</div>';
+}
+function add(id){cart.push(products.find(p=>p.id===id));updateCart();toast("Added to your Pika cart");}
+function buy(id){add(id);openModal('cartModal')}
+function updateCart(){document.getElementById('count').textContent=cart.length;document.getElementById('cart').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><div><b>${p.name}</b><br><small style="color:#777">${p.lane}</small></div><b>৳ ${p.price.toLocaleString()}</b></div>`).join('')+`<div style="display:flex;justify-content:space-between;padding:20px 0;font-size:19px"><b>Total</b><b>৳ ${cart.reduce((s,p)=>s+p.price,0).toLocaleString()}</b></div><button class="btn primary" style="width:100%" onclick="toast('Demo checkout — COD selected');closeModal('cartModal')">Continue to Checkout</button>`:'<div class="empty">Your cart is empty.<br>Explore verified products to get started.</div>'}
+function openModal(id){document.getElementById(id).classList.add('open')}
+function closeModal(id){document.getElementById(id).classList.remove('open')}
+function toast(msg){const t=document.createElement('div');t.textContent=msg;t.style='position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#10143d;color:#fff;padding:12px 18px;border-radius:12px;z-index:200;font-weight:700;font-size:13px';document.body.appendChild(t);setTimeout(()=>t.remove(),1800)}
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open')}));
+renderProducts();updateCart();
+</script>
+</body>
+</html>
